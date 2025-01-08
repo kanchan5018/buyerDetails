@@ -18,9 +18,9 @@ const AddBuyerPage = () => {
     const onSubmit = (data) => {
         dispatch(addBuyers(data));
         toast.success('Buyer added successfully!', {
-            position: toast.POSITION.TOP_RIGHT,
+            position: 'top-right',
         });
-        navigate('/manage-buyers');
+        navigate('/');
     };
 
     const nextStep = async () => {

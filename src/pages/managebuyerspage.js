@@ -81,11 +81,11 @@ const ManageBuyersPage = () => {
 
         // Send email using emailjs
         emailjs.send('service_996bxqr', 'service_996bxqr', {
-            from_name: 'Buyers', 
-            to_name: 'Recipient',  
+            from_name: 'Buyers',
+            to_name: 'Recipient',
             message: 'Here is the buyers data attached.', // Optional, replace with the email body
             attachment: file // Attach the file
-        },'FAlKw1dtjR7em5R3u') 
+        }, 'FAlKw1dtjR7em5R3u')
             .then((result) => {
                 toast.success('Email sent successfully!');
             }, (error) => {
@@ -143,7 +143,12 @@ const ManageBuyersPage = () => {
                         type: selectionType,
                         ...rowSelection,
                     }}
-                    pagination={{ pageSize: 10 }}
+                    pagination={{
+                        pageSize: 10,
+                        total: buyers.length,
+                        showTotal: (total) => `Total ${total} items`,
+                    }}
+
                 />
             </div>
 

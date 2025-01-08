@@ -59,6 +59,51 @@
       "clarityGrade": "h",
       "cutGrade": "hh",
       "currentPrice": 200
+    },
+    {
+      "id": "6870",
+      "name": "hello",
+      "email": "kanchantiwari@gmail.com",
+      "mobile": "9268956789",
+      "address": "suratt",
+      "buyingType": "type",
+      "diamondType": "Natural",
+      "shape": "Round",
+      "caratWeight": "66",
+      "colorGrade": "red",
+      "clarityGrade": "g",
+      "cutGrade": "g",
+      "currentPrice": "100"
+    },
+    {
+      "id": "5595",
+      "name": "hhh",
+      "email": "kanchan@gmail.com",
+      "mobile": "8688090987",
+      "address": "jhajh",
+      "buyingType": "dss",
+      "diamondType": "Natural",
+      "shape": "Round",
+      "caratWeight": "77",
+      "colorGrade": "h",
+      "clarityGrade": "jj",
+      "cutGrade": "uu",
+      "currentPrice": "200"
+    },
+    {
+      "id": "9540",
+      "name": "xyz",
+      "email": "xyz@gmail.com",
+      "mobile": "7667878767",
+      "address": "hhhh",
+      "buyingType": "tttttttt",
+      "diamondType": "Natural",
+      "shape": "Round",
+      "caratWeight": "77",
+      "colorGrade": "jj",
+      "clarityGrade": "ggh",
+      "cutGrade": "jjj",
+      "currentPrice": "100"
     }
   ]
 }
