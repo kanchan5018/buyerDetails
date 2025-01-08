@@ -1,4 +1,64 @@
 {
-    "buyers": []
+  "buyers": [
+    {
+      "id": "1",
+      "name": "kanchan Tiwari",
+      "email": "kanchan@example.com",
+      "mobile": "1234567890",
+      "address": "123 surat, City, Country",
+      "buyingType": "Retail",
+      "diamondType": "Natural",
+      "shape": "Round",
+      "caratWeight": "1.5",
+      "colorGrade": "G",
+      "clarityGrade": "VS1",
+      "cutGrade": "Excellent",
+      "currentPrice": 200
+    },
+    {
+      "id": "3ac4",
+      "name": "kanchan",
+      "email": "itskanch@gmail.com",
+      "mobile": "8965789978",
+      "address": "hhjj",
+      "buyingType": "jkmk",
+      "diamondType": "Natural",
+      "shape": "Princess",
+      "caratWeight": "89",
+      "colorGrade": "white",
+      "clarityGrade": "g",
+      "cutGrade": "a",
+      "currentPrice": 200
+    },
+    {
+      "id": "cf9e",
+      "name": "kanchan",
+      "email": "itskanch@gmail.com",
+      "mobile": "976567899",
+      "address": "hhh",
+      "buyingType": "jkk",
+      "diamondType": "Natural",
+      "shape": "Princess",
+      "caratWeight": "89",
+      "colorGrade": "white",
+      "clarityGrade": "h",
+      "cutGrade": "a",
+      "currentPrice": 300
+    },
+    {
+      "id": "a06a",
+      "name": "kanchan",
+      "email": "tiwarikanchan0518@gmail.com",
+      "mobile": "9265896101",
+      "address": "KKKKKKKKKKKKKKKKKKKKKK",
+      "buyingType": "HHHHHHHHH",
+      "diamondType": "Synthetic",
+      "shape": "Emerald",
+      "caratWeight": "89",
+      "colorGrade": "yellow",
+      "clarityGrade": "h",
+      "cutGrade": "hh",
+      "currentPrice": 200
+    }
+  ]
 }
-  

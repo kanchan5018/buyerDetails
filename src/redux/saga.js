@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeEvery, all } from 'redux-saga/effects';
 import { ActionType } from './action';
 import { postRequest, getRequest } from '../services/api'; // Adjust the import path based on your file structure
 
@@ -7,7 +7,6 @@ const API_BUYERS_URL = 'buyers'; // Assuming you're using /buyers endpoint for b
 
 // Worker saga to handle adding a buyer
 function* addBuyer(action) {
-    console.log("action",action)
     try {
         const response = yield call(postRequest, { url: API_BUYERS_URL, data: action.payload });
         yield put({ type: ActionType.ADD_BUYERS_REQUEST_SUCCESS, payload: response.data });
@@ -15,6 +14,7 @@ function* addBuyer(action) {
         yield put({ type: ActionType.ADD_BUYERS_REQUEST_FAILURE, error });
     }
 }
+
 
 // Worker saga to fetch buyers details
 function* fetchBuyers() {
@@ -26,19 +26,25 @@ function* fetchBuyers() {
     }
 }
 
-// Worker saga to handle displaying selected buyers
-function* displaySelectedBuyers(action) {
+// Worker saga to handle displaying diamond buyers details
+function* fetchBuyerDetails(action) {
     try {
-        const response = yield call(getRequest, { url: `${API_BUYERS_URL}/${action.payload.id}` }); // Adjust based on your endpoint structure
-        yield put({ type: ActionType.DISPLAY_SELECTED_BUYERS_REQUEST_SUCCESS, payload: response.data });
+        const response = yield call(getRequest, { url: `${API_BUYERS_URL}/${action.payload}` }); // Adjust based on your endpoint structure
+        yield put({ type: ActionType.DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST_SUCCESS, payload: response.data });
     } catch (error) {
-        yield put({ type: ActionType.DISPLAY_SELECTED_BUYERS_REQUEST_FAILURE, error });
+        yield put({ type: ActionType.DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST_FAILURE, error });
     }
 }
 
 // Watcher saga
-export default function* watchBuyers() {
+function* watchBuyers() {
     yield takeEvery(ActionType.ADD_BUYERS_REQUEST, addBuyer);
     yield takeEvery(ActionType.FETCH_BUYERS_DETAILS_REQUEST, fetchBuyers);
-    yield takeEvery(ActionType.DISPLAY_SELECTED_BUYERS_REQUEST, displaySelectedBuyers);
+    yield takeEvery(ActionType.DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST, fetchBuyerDetails);
 }
+
+function* BuyersSaga() {
+    yield all([call(watchBuyers)]);
+  }
+  
+  export default BuyersSaga;

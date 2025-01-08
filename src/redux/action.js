@@ -7,29 +7,28 @@ export const ActionType = {
     FETCH_BUYERS_DETAILS_REQUEST_SUCCESS:'FETCH_BUYERS_DETAILS_REQUEST_SUCCESS',
     FETCH_BUYERS_DETAILS_REQUEST_FAIULRE: 'FETCH_BUYERS_DETAILS_REQUEST_FAIULRE',
 
-    DISPLAY_SELECTED_BUYERS_REQUEST: 'DISPLAY_SELECTED_BUYERS_REQUEST',
-    DISPLAY_SELECTED_BUYERS_REQUEST_SUCCESS: 'DISPLAY_SELECTED_BUYERS_REQUEST_SUCCESS',
-    DISPLAY_SELECTED_BUYERS_REQUEST_FAILURE: 'DISPLAY_SELECTED_BUYERS_REQUEST_FAILURE'
+    DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST: 'DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST',
+    DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST_SUCCESS: 'DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST_SUCCESS',
+    DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST_FAILURE: 'DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST_FAILURE'
 }
 
 export const addBuyers = (addBuyers) =>{
-    console.log("addBuyers", addBuyers)
     return{
         type: ActionType.ADD_BUYERS_REQUEST,
         payload: addBuyers
     }
 }
 
-export const fetch = (getBuyers) => {
+export const fetchbuyers = (getBuyers) => {
     return{
         type: ActionType.FETCH_BUYERS_DETAILS_REQUEST,
         payload: getBuyers
     }
 }
 
-export const selectedBuyers = (selectedBuyers)=>{
+export const diamondBuyersDetails = (id)=>{
     return{
-        type: ActionType.DISPLAY_SELECTED_BUYERS_REQUEST,
-        payload: selectedBuyers
+        type: ActionType.DISPLAY_BUYERS_DIAMOND_DETAILS_REQUEST,
+        payload: id
     }
 }
